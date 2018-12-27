@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="new command json and make class Hover">
-      <change afterPath="$PROJECT_DIR$/src/sample/Download.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="commit from idea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Laba_7_2/lab/Server/Collect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Laba_7_2/lab/Server/Collect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Laba_7_2/lab/Server/ConsoleReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Laba_7_2/lab/Server/ConsoleReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Laba_7_2/sample/ClientController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Laba_7_2/sample/ClientController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Laba_7_2/sample/ClientController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Laba_7_2/sample/ClientController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Laba_7_2/sample/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Laba_7_2/sample/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Hover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Hover.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/ClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="76" column="60" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
+            <state relative-caret-position="153">
+              <caret line="66" column="53" lean-forward="true" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -318,7 +317,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545951764683" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545951942178" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -489,7 +488,7 @@
       <workItem from="1545756385143" duration="290000" />
       <workItem from="1545760183004" duration="16231000" />
       <workItem from="1545937864787" duration="241000" />
-      <workItem from="1545942030132" duration="9637000" />
+      <workItem from="1545942030132" duration="9898000" />
     </task>
     <task id="LOCAL-00001" summary="add LocalDateTime to class Book and fix serialization of Date">
       <created>1545945382757</created>
@@ -505,11 +504,25 @@
       <option name="project" value="LOCAL" />
       <updated>1545947723215</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="auto">
+      <created>1545951755860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545951755860</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit from idea">
+      <created>1545951938201</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545951938201</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62155000" />
+    <option name="totallyTimeSpent" value="62416000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,6 +535,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17449665" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -606,7 +620,9 @@
     <MESSAGE value="make singleton from Collect" />
     <MESSAGE value="add LocalDateTime to class Book and fix serialization of Date" />
     <MESSAGE value="new command json and make class Hover" />
-    <option name="LAST_COMMIT_MESSAGE" value="new command json and make class Hover" />
+    <MESSAGE value="auto" />
+    <MESSAGE value="commit from idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit from idea" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -799,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="76" column="60" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
+        <state relative-caret-position="153">
+          <caret line="66" column="53" lean-forward="true" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
         </state>
       </provider>
     </entry>
