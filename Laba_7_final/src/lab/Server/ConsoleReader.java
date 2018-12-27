@@ -1,5 +1,7 @@
 package lab.Server;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -38,6 +40,16 @@ public class ConsoleReader implements Runnable {
     public void run() {
         System.out.println("2");
         String sendData = "";
+
+        if ("json".equals(recieve)){
+            recieve=recieve.substring(5);
+            Integer a = Integer.valueOf(recieve);
+            try {
+                sendData=ObjectToJson(a);
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+        }
 
         if("add".equals(recieve)){
             all.Add();

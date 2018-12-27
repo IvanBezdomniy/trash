@@ -21,17 +21,14 @@ import lab.Server.Collect;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class ClientController {
     public static Double filterPages = 0.0;
     public static Double filterYears = 0.0;
     public static Map<Integer, Book> books;
     public static List<Rectangle> rectangles= new ArrayList<>();
-
+    Map<Rectangle, String> rectangleBookMap;
     @FXML
     private ResourceBundle resources;
 
@@ -63,7 +60,7 @@ public class ClientController {
         all.Add();
 //        deserialize(all);
 //        books=all.getLiblaries();
-
+        rectangleBookMap = new HashMap<>();
         String jsonbooks= ClientLogic.request("1");
         int indexn;
         while (true){
@@ -149,7 +146,7 @@ public class ClientController {
             System.out.println(parseJSON(listBooks.get(i), "year"));
             if((new Double(parseJSON(listBooks.get(i), "year"))>filterYears) && (new Double(parseJSON(listBooks.get(i), "pages"))>filterPages)){
                 rectangles.add(new Rectangle(50, 50, Color.INDIANRED));
-
+                rectangleBookMap.put(rectangles.get(k), listBooks.get(i));
                 tilepane.getChildren().add(rectangles.get(k));
                 k++;
             }

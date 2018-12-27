@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Collect {
@@ -101,6 +102,12 @@ public class Collect {
             }
 
 
+
+        }
+        public static String ObjectToJson(Integer id) throws JsonProcessingException {
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(Liblaries.get(id));
+            return json;
         }
 }
 
