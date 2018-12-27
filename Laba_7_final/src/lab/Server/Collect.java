@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 
 public class Collect {
 
@@ -109,5 +110,20 @@ public class Collect {
             String json = mapper.writeValueAsString(Liblaries.get(id));
             return json;
         }
+    public static Book fromJsonStringToObject(String jsonString)
+    {
+        Gson gson = new Gson();
+        return gson.fromJson(jsonString, Book.class);
+    }
+
+
+    public static String fromObjectToJsonString(Book book)
+    {
+        Gson gson = new Gson();
+        StringWriter writer = new StringWriter();
+        gson.toJson(book, writer);
+
+        return writer.toString();
+    }
 }
 
