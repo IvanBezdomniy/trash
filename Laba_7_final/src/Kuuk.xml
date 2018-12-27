@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="11.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.concurrent.ConcurrentHashMap">
+  <void method="put">
+   <int>6</int>
+   <object class="lab.Server.Book">
+    <void property="authtor">
+     <string>Zuz</string>
+    </void>
+    <void property="bookname">
+     <string>asa</string>
+    </void>
+    <void property="pages">
+     <int>5</int>
+    </void>
+    <void property="year">
+     <int>191</int>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <int>7</int>
+   <object class="lab.Server.Book">
+    <void property="authtor">
+     <string>Tol</string>
+    </void>
+    <void property="bookname">
+     <string>vaimir</string>
+    </void>
+    <void property="pages">
+     <int>36</int>
+    </void>
+    <void property="year">
+     <int>162</int>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <int>8</int>
+   <object class="lab.Server.Book">
+    <void property="authtor">
+     <string>Pushkin</string>
+    </void>
+    <void property="bookname">
+     <string>Cap Daughter</string>
+    </void>
+    <void property="pages">
+     <int>300</int>
+    </void>
+    <void property="year">
+     <int>1842</int>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <int>9</int>
+   <object class="lab.Server.Book">
+    <void property="authtor">
+     <string>Goncharov</string>
+    </void>
+    <void property="bookname">
+     <string>Oblomoff</string>
+    </void>
+    <void property="pages">
+     <int>270</int>
+    </void>
+    <void property="year">
+     <int>1867</int>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <int>15</int>
+   <object class="lab.Server.Book">
+    <void property="authtor">
+     <string>Дэниел Киз</string>
+    </void>
+    <void property="bookname">
+     <string>flowers for algernon</string>
+    </void>
+    <void property="pages">
+     <int>299</int>
+    </void>
+    <void property="year">
+     <int>1966</int>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <int>245</int>
+   <object class="lab.Server.Book">
+    <void property="authtor">
+     <string>Bulgakoff</string>
+    </void>
+    <void property="bookname">
+     <string>Dog`s Heart</string>
+    </void>
+    <void property="pages">
+     <int>499</int>
+    </void>
+    <void property="year">
+     <int>1926</int>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
