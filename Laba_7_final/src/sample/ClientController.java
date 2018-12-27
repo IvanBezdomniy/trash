@@ -5,10 +5,12 @@ import com.interactivemesh.jfx.importer.obj.ObjModelImporter;
 import javafx.animation.*;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
@@ -22,12 +24,14 @@ import lab.Server.Collect;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientController {
     public static Double filterPages = 0.0;
     public static Double filterYears = 0.0;
     public static Map<Integer, Book> books;
     public static List<Rectangle> rectangles= new ArrayList<>();
+    public static String jsonbooks;
     Map<Rectangle, String> rectangleBookMap;
     @FXML
     private ResourceBundle resources;
@@ -60,9 +64,11 @@ public class ClientController {
         all.Add();
 //        deserialize(all);
 //        books=all.getLiblaries();
-        rectangleBookMap = new HashMap<>();
-        String jsonbooks= ClientLogic.request("1");
+        rectangleBookMap = new ConcurrentHashMap<>();
+        jsonbooks= ClientLogic.request("1");
         int indexn;
+        Thread downloadThread = new Thread(new Download());
+
         while (true){
             indexn=jsonbooks.indexOf("\n");
             if (indexn==-1)
@@ -92,36 +98,11 @@ public class ClientController {
                 filterYears= sliderYears.getValue();
                 drawBook();
             }
-
         });
 
 
 
-//
-//        sliderYears.valueProperty().addListener(new ChangeListener<Number>() {
-//
-//            @Override
-//            public void changed(ObservableValue<? extends Number> observable, //
-//                                Number oldValue, Number newValue) {
-//
-//                sliderYears.setValue((double) newValue);
-//                clear();
-//                drawBook();
-//            }
-//        });
-//        sliderPages.valueProperty().addListener(new ChangeListener<Number>() {
-//
-//            @Override
-//            public void changed(ObservableValue<? extends Number> observable, //
-//                                Number oldValue, Number newValue) {
-//
-//                sliderPages.setValue((double) newValue);
-//                clear();
-//                drawBook();
-//            }
-//        });
-//        Thread thread = new Thread(new Download(all));
-//        thread.start();
+
 
     }
 
@@ -152,21 +133,12 @@ public class ClientController {
             }
 
         }
+//        Thread threadHover = new Thread(new Hover(rectangleBookMap, tilepane));
+//        threadHover.start();
+
     }
 
-//
-//        public void changeFilterPages(){
-//            System.out.println(java.lang.System.currentTimeMillis());
-//        filterPages=sliderPages.getValue();
-//
-//            drawBook();
-//
-//        }
-//        public void changeFilterYears(){
-//        filterYears=sliderPages.getValue();
-//            drawBook();
-//
-//        }
+
 
 
     public void clear(){
