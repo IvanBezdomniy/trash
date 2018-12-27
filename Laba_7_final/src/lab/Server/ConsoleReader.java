@@ -9,8 +9,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.util.Map;
 
-import static lab.Server.Collect.JsonToObject;
-import static lab.Server.Collect.Liblaries;
+import static lab.Server.Collect.*;
 import static lab.Server.CommandsPatterns.checkWithRegExpImport;
 import static lab.Server.CommandsPatterns.checkWithRegExpInsert;
 import static lab.Server.CommandsPatterns.checkWithRegExpRemove;
@@ -40,9 +39,11 @@ public class ConsoleReader implements Runnable {
         System.out.println("2");
         String sendData = "";
 
-
+        if("add".equals(recieve)){
+            all.Add();
+        }
         if ("save".equals(recieve)) {
-            all.save();
+            save();
             sendData="Коллекция сохранена";
         }
         if (checkWithRegExpRemove(recieve) == true) {

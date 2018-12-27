@@ -1,7 +1,7 @@
 package lab.Server;
-import java.beans.XMLEncoder;
-import java.beans.XMLDecoder;
+import java.beans.*;
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -9,7 +9,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Collect {
-
 
     static Map<Integer, Book> Liblaries = new ConcurrentHashMap<>();
 
@@ -28,26 +27,40 @@ public class Collect {
             b1.setBookname("VoinaIMir");
             b1.setYear(1867);
             b1.setPages(1244);
+            b1.setDate(LocalDateTime.now());
             Book b2 = new Book();
             b2.setAuthtor("Оруэлл");
             b2.setBookname("1984");
             b2.setYear(1944);
             b2.setPages(356);
-            Book b3 = new Book();
+        b2.setDate(LocalDateTime.now());
+
+        Book b3 = new Book();
             b3.setPages(15);
             b3.setYear(1974);
             b3.setBookname("Stihi");
             b3.setAuthtor("Agniya Barto");
+             b3.setDate(LocalDateTime.now());
+
             Liblaries.put(1, b1);
             Liblaries.put(2, b2);
             Liblaries.put(3, b3);
 
         }
 
-        public void save() {
+        public static void save() {
             try {
                 XMLEncoder x = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("src/Kuuk.xml")));
-
+                x.setPersistenceDelegate(LocalDateTime.class,
+                        new PersistenceDelegate() {
+                            @Override
+                            protected Expression instantiate(Object localDate, Encoder encdr) {
+                                return new Expression(localDate,
+                                        LocalDateTime.class,
+                                        "parse",
+                                        new Object[]{localDate.toString()});
+                            }
+                        });
                 x.writeObject(Liblaries);
                 x.close();
             } catch (FileNotFoundException e) {

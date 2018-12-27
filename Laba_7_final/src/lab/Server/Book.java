@@ -1,14 +1,23 @@
 package lab.Server;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 public  class Book implements Serializable {
     String bookname;
     String authtor;
     int year;
     int pages;
-
+    LocalDateTime date ;
     public String getBookname() {
         return bookname;
+    }
+
+    public  LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 
     public String getAuthtor() {
@@ -46,6 +55,17 @@ public  class Book implements Serializable {
                 ", authtor='" + authtor + '\'' +
                 ", year=" + year +
                 ", pages=" + pages +
+                ", date=" + date +
                 '}';
     }
+//    @Override
+//    public String toString() {
+//        return "Book{" +
+//                "bookname='" + bookname + '\'' +
+//                ", authtor='" + authtor + '\'' +
+//                ", year=" + year +
+//                ", pages=" + pages +
+//                " time of creating= "+date+
+//                '}';
+//    }
 }

@@ -1,68 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="11.0.1" class="java.beans.XMLDecoder">
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
  <object class="java.util.concurrent.ConcurrentHashMap">
   <void method="put">
-   <int>6</int>
+   <int>1</int>
    <object class="lab.Server.Book">
     <void property="authtor">
-     <string>Zuz</string>
+     <string>Tolstoy</string>
     </void>
     <void property="bookname">
-     <string>asa</string>
+     <string>VoinaIMir</string>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2018-12-28T00:13:48.684</string>
+     </object>
     </void>
     <void property="pages">
-     <int>5</int>
-    </void>
-    <void property="year">
-     <int>191</int>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <int>7</int>
-   <object class="lab.Server.Book">
-    <void property="authtor">
-     <string>Tol</string>
-    </void>
-    <void property="bookname">
-     <string>vaimir</string>
-    </void>
-    <void property="pages">
-     <int>36</int>
-    </void>
-    <void property="year">
-     <int>162</int>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <int>8</int>
-   <object class="lab.Server.Book">
-    <void property="authtor">
-     <string>Pushkin</string>
-    </void>
-    <void property="bookname">
-     <string>Cap Daughter</string>
-    </void>
-    <void property="pages">
-     <int>300</int>
-    </void>
-    <void property="year">
-     <int>1842</int>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <int>9</int>
-   <object class="lab.Server.Book">
-    <void property="authtor">
-     <string>Goncharov</string>
-    </void>
-    <void property="bookname">
-     <string>Oblomoff</string>
-    </void>
-    <void property="pages">
-     <int>270</int>
+     <int>1244</int>
     </void>
     <void property="year">
      <int>1867</int>
@@ -70,36 +24,46 @@
    </object>
   </void>
   <void method="put">
-   <int>15</int>
+   <int>2</int>
    <object class="lab.Server.Book">
     <void property="authtor">
-     <string>Дэниел Киз</string>
+     <string>Оруэлл</string>
     </void>
     <void property="bookname">
-     <string>flowers for algernon</string>
+     <string>1984</string>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2018-12-28T00:13:48.685</string>
+     </object>
     </void>
     <void property="pages">
-     <int>299</int>
+     <int>356</int>
     </void>
     <void property="year">
-     <int>1966</int>
+     <int>1944</int>
     </void>
    </object>
   </void>
   <void method="put">
-   <int>245</int>
+   <int>3</int>
    <object class="lab.Server.Book">
     <void property="authtor">
-     <string>Bulgakoff</string>
+     <string>Agniya Barto</string>
     </void>
     <void property="bookname">
-     <string>Dog`s Heart</string>
+     <string>Stihi</string>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2018-12-28T00:13:48.685</string>
+     </object>
     </void>
     <void property="pages">
-     <int>499</int>
+     <int>15</int>
     </void>
     <void property="year">
-     <int>1926</int>
+     <int>1974</int>
     </void>
    </object>
   </void>
