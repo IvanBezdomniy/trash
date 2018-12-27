@@ -12,13 +12,13 @@ import static lab.Server.ConsoleReader.deserialize;
 
 public class ServerLogic {
 
-    public static void main(String[] args) throws IOException {
+    public static void server() throws IOException {
 
         Collect all = new Collect();
         deserialize(all);
         DatagramChannel serverSocket = DatagramChannel.open();
 
-        SocketAddress address = new InetSocketAddress(8081);
+        SocketAddress address = new InetSocketAddress(8083);
         serverSocket.bind(address);
 
         Thread workWithClients = new Thread(new WorkWithClients(serverSocket, all));

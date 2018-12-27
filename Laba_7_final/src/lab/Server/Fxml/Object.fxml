@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="124.0" prefWidth="307.0" style="-fx-background-color: pink; -fx-border-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab.Server.ObjectController">
+   <children>
+      <TextField fx:id="textObject" layoutX="20.0" layoutY="19.0" onAction="#SubmitObjectbyEnter" prefHeight="43.0" prefWidth="267.0" promptText="Введите Json объект" />
+      <Button layoutX="103.0" layoutY="76.0" mnemonicParsing="false" onAction="#submitObject" prefHeight="34.0" prefWidth="102.0" text="Подтвердить" />
+   </children>
+</AnchorPane>

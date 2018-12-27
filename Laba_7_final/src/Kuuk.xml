@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_191" class="java.beans.XMLDecoder">
+<java version="1.8.0_181" class="java.beans.XMLDecoder">
  <object class="java.util.concurrent.ConcurrentHashMap">
   <void method="put">
    <int>1</int>
@@ -12,7 +12,7 @@
     </void>
     <void property="date">
      <object class="java.time.LocalDateTime" method="parse">
-      <string>2018-12-28T00:13:48.684</string>
+      <string>2018-12-28T01:42:30.892</string>
      </object>
     </void>
     <void property="pages">
@@ -34,7 +34,7 @@
     </void>
     <void property="date">
      <object class="java.time.LocalDateTime" method="parse">
-      <string>2018-12-28T00:13:48.685</string>
+      <string>2018-12-28T01:42:30.893</string>
      </object>
     </void>
     <void property="pages">
@@ -49,21 +49,21 @@
    <int>3</int>
    <object class="lab.Server.Book">
     <void property="authtor">
-     <string>Agniya Barto</string>
+     <string>Pidoras</string>
     </void>
     <void property="bookname">
-     <string>Stihi</string>
+     <string>VoinaIMir</string>
     </void>
     <void property="date">
      <object class="java.time.LocalDateTime" method="parse">
-      <string>2018-12-28T00:13:48.685</string>
+      <string>2018-12-28T01:42:30.892</string>
      </object>
     </void>
     <void property="pages">
-     <int>15</int>
+     <int>1244</int>
     </void>
     <void property="year">
-     <int>1974</int>
+     <int>1867</int>
     </void>
    </object>
   </void>
