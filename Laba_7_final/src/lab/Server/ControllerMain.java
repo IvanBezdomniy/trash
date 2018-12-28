@@ -6,7 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -16,13 +16,12 @@ import java.util.ResourceBundle;
 
 public class ControllerMain {
 
+
     @FXML
     private ResourceBundle resources;
 
     @FXML
     private URL location;
-
-
 
     @FXML
     private Button Remove_button;
@@ -46,6 +45,14 @@ public class ControllerMain {
         assert Save_button != null : "fx:id=\"Save_button\" was not injected: check your FXML file 'Main.fxml'.";
         assert Clear_button != null : "fx:id=\"Clear_button\" was not injected: check your FXML file 'Main.fxml'.";
         assert Add_button != null : "fx:id=\"Add_if_min_button\" was not injected: check your FXML file 'Main.fxml'.";
+
+
+        MenuItem rus = new MenuItem("Русский");
+
+        MenuItem eng = new MenuItem("English(UK)");
+        MenuItem lit = new MenuItem("Lietuvių");
+        MenuItem isl = new MenuItem("Íslensk");
+
 
 
     }
@@ -92,4 +99,6 @@ public class ControllerMain {
         }
         catch (IOException e) {e.printStackTrace();}
     }
+
+
 }

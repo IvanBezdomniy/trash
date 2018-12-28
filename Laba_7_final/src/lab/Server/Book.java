@@ -1,12 +1,27 @@
 package lab.Server;
+import lab.Server.ORM.annotations.AttribType;
+import lab.Server.ORM.annotations.DBTable;
+import lab.Server.ORM.annotations.IgnoreField;
+import lab.Server.ORM.annotations.SerialID;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
-
+@DBTable(name="Книги")
+@SerialID
 public  class Book implements Serializable {
+    @AttribType(typeName ="String")
     String bookname;
+    @AttribType(typeName ="String")
+
     String authtor;
+    @AttribType(typeName ="Integer")
+
     int year;
+    @AttribType(typeName ="Integer")
+
     int pages;
+    @AttribType(typeName ="Date")
+    @IgnoreField
     LocalDateTime date ;
     public String getBookname() {
         return bookname;

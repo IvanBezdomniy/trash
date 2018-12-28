@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="add LocalDateTime to class Book and fix serialization of Date">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="final 7 fixed">
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/Attribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/ClassAnalizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/RefAttribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/SQLCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/annotations/AttribType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/annotations/ConnectionAttrib.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/annotations/DBTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/annotations/IgnoreField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/annotations/NotNullAttrib.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/annotations/PrimaryKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab/Server/ORM/annotations/SerialID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/localization/ApplicationLoc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/localization/LocaleChangeListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kuuk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kuuk.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Client/ClientLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Client/ClientLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/Collect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/Collect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/ConsoleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/ConsoleReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab/Server/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab/Server/ControllerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/ControllerMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/DoCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/DoCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/Fxml/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/Fxml/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/Fxml/Object.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/Fxml/Object.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/Fxml/passwordnew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/Fxml/passwordnew.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/ObjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/ObjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/ServOneClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/ServOneClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab/Server/ServerLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/ServerLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab/Server/WorkWithClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab/Server/WorkWithClients.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Download.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Download.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Hover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Hover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/client.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/password.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,10 +80,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lab/Server/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/SQLCommands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="-1212">
+              <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,19 +92,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/ClientController.java">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/ClassAnalizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+            <state relative-caret-position="-741">
+              <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,70 +104,74 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/lab/Server/ObjectController.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/client.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="175">
+              <caret line="19" column="75" lean-forward="true" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/NotNullAttrib.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lab/Server/ControllerMain.java">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/IgnoreField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lab/Client/WorkWithServer.java">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/DBTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="102">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lab/Client/ClientLogic.java">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/ConnectionAttrib.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="102">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lab/Server/ControllerPassword.java">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/AttribType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+            <state relative-caret-position="102">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lab/Server/Collect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="766">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Download.java">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/Attribute.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/RefAttribute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -187,6 +182,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -218,31 +215,36 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/lab/Server/ServOneClient.java" />
         <option value="$PROJECT_DIR$/src/lab/Client/WorkWithServer.java" />
-        <option value="$PROJECT_DIR$/src/sample/client.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/Kuuk.xml" />
-        <option value="$PROJECT_DIR$/src/lab/Server/Book.java" />
         <option value="$PROJECT_DIR$/src/sample/Hover.java" />
         <option value="$PROJECT_DIR$/src/lab/Server/ConsoleReader.java" />
         <option value="$PROJECT_DIR$/src/lab/Server/Fxml/Main.fxml" />
         <option value="$PROJECT_DIR$/src/lab/Server/Fxml/Object.fxml" />
         <option value="$PROJECT_DIR$/src/lab/Server/Fxml/passwordnew.fxml" />
         <option value="$PROJECT_DIR$/src/lab/Client/ClientLogic.java" />
-        <option value="$PROJECT_DIR$/src/lab/Server/ServerLogic.java" />
         <option value="$PROJECT_DIR$/src/lab/Server/Collect.java" />
         <option value="$PROJECT_DIR$/src/lab/Server/Main.java" />
         <option value="$PROJECT_DIR$/src/lab/Server/DoCommands.java" />
         <option value="$PROJECT_DIR$/src/sample/Download.java" />
-        <option value="$PROJECT_DIR$/src/sample/ClientController.java" />
-        <option value="$PROJECT_DIR$/src/lab/Server/ControllerMain.java" />
         <option value="$PROJECT_DIR$/src/lab/Server/ObjectController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/localization/AppLocale.java" />
+        <option value="$PROJECT_DIR$/src/sample/localization/LocaleChanheListener.java" />
+        <option value="$PROJECT_DIR$/src/lab/Server/ControllerMain.java" />
+        <option value="$PROJECT_DIR$/src/sample/ClientController.java" />
+        <option value="$PROJECT_DIR$/src/lab/Server/ORM/table.java" />
+        <option value="$PROJECT_DIR$/src/lab/Server/Book.java" />
+        <option value="$PROJECT_DIR$/src/lab/Server/ServerLogic.java" />
+        <option value="$PROJECT_DIR$/src/lab/Server/ORM/SQLCommands.java" />
+        <option value="$PROJECT_DIR$/src/lab/Server/ORM/ClassAnalizer.java" />
+        <option value="$PROJECT_DIR$/src/sample/client.fxml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="25" />
+    <option name="x" value="281" />
+    <option name="y" value="-18" />
     <option name="width" value="1375" />
     <option name="height" value="745" />
   </component>
@@ -252,7 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -302,7 +303,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lab" type="462c0819:PsiDirectoryNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="Fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="ORM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laba_7_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laba_7_final" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lab" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="ORM" type="462c0819:PsiDirectoryNode" />
+              <item name="annotations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Laba_7_final" type="b2602c69:ProjectViewProjectNode" />
@@ -312,12 +322,20 @@
             </path>
             <path>
               <item name="Laba_7_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Laba_7_final" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="localization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Laba_7_final" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -331,9 +349,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545990978263" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546002945064" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/gson-2.8.5.jar!/" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15585673" />
@@ -342,12 +360,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lab.Server.ORM" />
+      <recent name="lab.Server.ORM.annotations" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Metallhead\IdeaProjects\trash\Laba_7_final\src\lab\Server\ORM\annotations" />
+      <recent name="C:\Users\Metallhead\IdeaProjects\trash\Laba_7_final\src\lab\Server\ORM" />
       <recent name="C:\Users\Peppe\Desktop\trash\Laba_7_final\src\lab\Server" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/resource" />
-      <recent name="$PROJECT_DIR$/src/sample" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -529,7 +551,8 @@
       <workItem from="1545937864787" duration="241000" />
       <workItem from="1545942030132" duration="5661000" />
       <workItem from="1545952204230" duration="3462000" />
-      <workItem from="1545989776058" duration="850000" />
+      <workItem from="1545989776058" duration="1192000" />
+      <workItem from="1545992172812" duration="7762000" />
     </task>
     <task id="LOCAL-00001" summary="add LocalDateTime to class Book and fix serialization of Date">
       <created>1545945382757</created>
@@ -538,11 +561,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545945382758</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="final 7 fixed">
+      <created>1545991004010</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1545991004010</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64955000" />
+    <option name="totallyTimeSpent" value="73059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -556,7 +586,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17986578" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18255034" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -565,7 +595,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22379604" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22379604" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -584,7 +614,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.3295302" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="Maven" order="7" />
@@ -638,16 +668,14 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="make singleton from Collect" />
     <MESSAGE value="add LocalDateTime to class Book and fix serialization of Date" />
-    <option name="LAST_COMMIT_MESSAGE" value="add LocalDateTime to class Book and fix serialization of Date" />
+    <MESSAGE value="final 7 fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="final 7 fixed" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lab/Fxml/Main.fxml" />
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_192/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java" />
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_192/javafx-src.zip!/javafx/application/Application.java" />
     <entry file="file://$PROJECT_DIR$/.idea/ant.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -679,14 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/client.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -736,27 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lab/Server/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="58" selection-end-column="19" />
-          <folding>
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lab/Server/ServerLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lab/Server/ServOneClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -801,10 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ObjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+        <state relative-caret-position="102">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -818,17 +817,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lab/Client/ClientLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lab/Server/ControllerPassword.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/Collect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
         </state>
       </provider>
     </entry>
@@ -839,49 +838,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lab/Server/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/lab/Client/ClientLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="408">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="69" column="2" lean-forward="true" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ClientController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/localization/LocaleChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lab/Server/Collect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lab/Server/ControllerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+        <state relative-caret-position="364">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lab/Server/ObjectController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/localization/ApplicationLoc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="186" column="36" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ServerLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/SQLCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1212">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/NotNullAttrib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/IgnoreField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/DBTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/ConnectionAttrib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/annotations/AttribType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/Attribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/RefAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lab/Server/ORM/ClassAnalizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/client.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="19" column="75" lean-forward="true" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

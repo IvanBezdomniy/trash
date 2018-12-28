@@ -65,7 +65,7 @@ public class Controller {
             stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Другая форма");
-            stage.setScene(new Scene(root1, 1280, 800, true, SceneAntialiasing.BALANCED));
+            stage.setScene(new Scene(root1, 1213, 700, true, SceneAntialiasing.BALANCED));
             stage.show();
 //
 //        }

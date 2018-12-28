@@ -9,22 +9,25 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
+import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.MeshView;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 import lab.Client.ClientLogic;
 import lab.Server.Book;
 import lab.Server.Collect;
+import sample.localization.ApplicationLoc;
 
+import javax.swing.*;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientController {
@@ -38,10 +41,29 @@ public class ClientController {
     private ResourceBundle resources;
 
     @FXML
+    private Menu menu;
+
+    @FXML
+    private RadioMenuItem isl;
+
+    @FXML
+    private RadioMenuItem uk;
+
+    @FXML
+    private Text textPages;
+
+    @FXML
+    private Text textYears;
+    @FXML
+    private RadioMenuItem lit;
+    @FXML
+    private RadioMenuItem rus;
+
+    @FXML
     private URL location;
 
     List<String> listBooks = new ArrayList<>();
-
+    ApplicationLoc appLoc=new ApplicationLoc();
     @FXML
     private Slider sliderPages;
 
@@ -78,7 +100,26 @@ public class ClientController {
         jsonbooks= ClientLogic.request("1");
 
 
-        Thread downloadThread = new Thread(new Download());
+
+
+
+
+//       appLoc.changeLocale(Locale.UK);
+//       appLoc.changeLocale(new Locale("Russia"));
+//       appLoc.changeLocale(new Locale("Island"));
+//       appLoc.changeLocale(new Locale("Litov"));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,16 +151,74 @@ public class ClientController {
 
     }
 
-    private MeshView[] get3dModel() {
-        ObjModelImporter objImporter = new ObjModelImporter();
-        try {
-            URL modelUrl = this.getClass().getResource("resource/Scooter-normals.obj");
-            objImporter.read(modelUrl);
-        } catch (ImportException e) {
-            // handle exception
+    public void setLocaleRus(){
+        if(rus.isSelected()){
+            uk.setSelected(false);
+            lit.setSelected(false);
+            isl.setSelected(false);
+            appLoc.changeLocale(new Locale("Russia"));
+            textPages.setText("Страницы");
+            textYears.setText("Годы");
+            menu.setText("Языки");
+            buttonAnimation.setText("Старт");
+            System.out.println("rus");
         }
-        return objImporter.getImport();
+        }
+    public void setLocaleUk(){
+        if(uk.isSelected()){
+            rus.setSelected(false);
+            lit.setSelected(false);
+            isl.setSelected(false);
+            appLoc.changeLocale(Locale.UK);
+            textPages.setText("Pages");
+            textYears.setText("Years");
+            menu.setText("Languages");
+            buttonAnimation.setText("Start");
+            System.out.println("uk");
+        }
     }
+    public void setLocaleLit(){
+        if(lit.isSelected()){
+            uk.setSelected(false);
+            rus.setSelected(false);
+            isl.setSelected(false);
+            appLoc.changeLocale(new Locale("Litva"));
+            textPages.setText("Atskaityta");
+            textYears.setText("Metai");
+            menu.setText("Kalbos");
+            buttonAnimation.setText("Pradėti");
+            System.out.println("litva");
+        }
+    }
+    public void setLocaleIsl(){
+        if(rus.isSelected()){
+            uk.setSelected(false);
+            lit.setSelected(false);
+            rus.setSelected(false);
+            appLoc.changeLocale(new Locale("Island"));
+            textPages.setText("Síður");
+            textYears.setText("Ár");
+            menu.setText("Tungumál");
+            buttonAnimation.setText("Byrja");
+
+            System.out.println("island");
+        }
+    }
+//        if(isl.isSelected()){
+//            appLoc.changeLocale(new Locale("Island"));
+//            System.out.println("Locale +" );
+//        }
+//        if (rus.isSelected()){
+//            appLoc.changeLocale(new Locale("Russia"));
+//        }
+//        if(uk.isSelected()){
+//            appLoc.changeLocale(Locale.UK);
+//        }
+//        if(lit.isSelected()){
+//            appLoc.changeLocale(new Locale("Litov"));
+//        }
+
+
 
     public void drawBook(){
         try {
