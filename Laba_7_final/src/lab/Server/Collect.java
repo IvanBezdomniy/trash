@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static lab.Server.ServerLogic.toDB;
+
 public class Collect {
 
     static Map<Integer, Book> Liblaries = new ConcurrentHashMap<>();
@@ -113,6 +115,8 @@ public class Collect {
         }
     public static Book fromJsonStringToObject(String jsonString)
     {
+        String todb = jsonString.concat("1");
+        toDB(todb);
         Gson gson = new Gson();
         return gson.fromJson(jsonString, Book.class);
     }

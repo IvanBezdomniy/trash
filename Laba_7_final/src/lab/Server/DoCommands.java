@@ -1,5 +1,7 @@
 package lab.Server;
 
+import lab.Server.ORM.SQLCommands;
+
 public class DoCommands {
 
 
@@ -9,6 +11,7 @@ public class DoCommands {
          System.out.println(command);}
 
          public static void DoCommand() {
+
          Collect collect = new Collect();
 
        String line = command;
@@ -26,6 +29,7 @@ public class DoCommands {
                collect.getLiblaries().remove(Collect.fromJsonStringToObject(line));
            }
            catch (Exception e) {
+               e.printStackTrace();
                System.out.println("Неверно введена книга");
            }
        }
@@ -44,6 +48,7 @@ public class DoCommands {
            }
            catch (Exception e) {
                System.out.println("Неверно введена книга");
+               e.printStackTrace();
            }
        }
 

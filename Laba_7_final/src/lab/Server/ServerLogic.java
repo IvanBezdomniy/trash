@@ -15,7 +15,7 @@ import java.util.Map;
 import static lab.Server.ConsoleReader.deserialize;
 
 public class ServerLogic {
-    static final String DB_URL = "jdbc:postgresql://localhost:5432/roma";
+    static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
     static final String USER = "postgres";
     static final String PASS = "12345";
     public static void server() throws IOException {
@@ -34,7 +34,6 @@ public class ServerLogic {
         Map<Attribute, String> kek = new HashMap<>();
         kek.put(attr1,"100");
 
-        toDB();
 
 //sqlcom.createWithDependencies(
 //        System.out.println(sqlcom.select(new ArrayList<>()) + ";");
@@ -43,26 +42,34 @@ public class ServerLogic {
 
 
     }
-    public static void toDB() {
+    public static void toDB(String json) {
         SQLCommands sqlcom = new SQLCommands(Book.class);
+
+        System.out.println(json);
+
         try {
 
 
             Driver driver = new org.postgresql.Driver();
             DriverManager.registerDriver(driver);
-        }catch (SQLException e){
+        }catch (Exception e){
             System.err.println("Не удалось загрузить драйвер");
             e.printStackTrace();
         }
         try {
             Connection connection=DriverManager.getConnection(DB_URL, USER, PASS);
-            System.out.println(sqlcom.insert("1"));
+
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlcom.select(new ArrayList<>()) + ";");
+            if (json.substring(json.length()-1).equals("1")) {
 
-                resultSet.toString();
+                System.out.println("dadadad");
+                json=json.substring(0,json.length()-1);
+                statement.executeQuery(sqlcom.insert(json));
 
-        } catch (SQLException e) {
+            }
+
+
+        } catch (Exception e) {
             System.err.println("Не удалось подключиться");
             e.printStackTrace();
         }

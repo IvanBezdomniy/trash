@@ -4,13 +4,20 @@ package lab.Server.ORM;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.util.JSONPObject;
-import jdk.nashorn.internal.parser.JSONParser;
 import lab.Server.ORM.annotations.AttribType;
 import lab.Server.ORM.annotations.DBTable;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.parser.Parser;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -49,33 +56,54 @@ public class SQLCommands
         return sqlBuilder.toString();
     }
     public String insert(String jsonString){
+        ResultSet resultSet = null;
+
         StringBuilder sqlBuilder = new StringBuilder();
-        for(Table t : ClassAnalizer.parseWithConnections(c)) {
+
 
             sqlBuilder.append("INSERT INTO ");
             sqlBuilder.append(c.getAnnotation(DBTable.class).name());
-            sqlBuilder.append("(");
-            for (Attribute row:table.getAttributes()
-                 ) {
-                String s =row.toString();
-                s=s.substring(0,s.indexOf(" "));
-                s=s+", ";
-                sqlBuilder.append(s);
-            }
+//            sqlBuilder.append("(");
+//            for (Attribute row:table.getAttributes()
+//                 ) {
+//                String s =row.toString();
+//                s=s.substring(0,s.indexOf(" "));
+//                s=s+", ";
+//                sqlBuilder.append(s);
+//            }
+//
+//            sqlBuilder.delete(sqlBuilder.length()-2,sqlBuilder.length()-1);
+//            sqlBuilder.append(") ");
+            sqlBuilder.append(" VALUES(((SELECT id from Книги order by id desc limit 1) + 1), ");
 
-            sqlBuilder.delete(sqlBuilder.length()-2,sqlBuilder.length()-1);
-            sqlBuilder.append(") ");
-            sqlBuilder.append("VALUES(");
             for (Attribute row:table.getAttributes()
             ) {
+                String s = row.toString();
+                System.out.println(s);
+                Object obj = null;
+                try {
+                    obj = new JSONParser().parse(jsonString);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
 
+                JSONObject jo = (JSONObject) obj;
 
-                String s =row.toString();
-                s=s.substring(0,s.indexOf(" "));
+                String rowString = String.valueOf(jo.get(s.substring(0,s.indexOf(" "))));
+                if(s.substring(s.indexOf(" ")+1).equals("text")){
+                    rowString="\'"+rowString+"\'";
+                }
+                rowString=rowString+", ";
+                sqlBuilder.append(rowString);
 
             }
+            sqlBuilder.delete(sqlBuilder.length()-2,sqlBuilder.length()-1);
+            sqlBuilder.append(");");
+
+
 //            String tableName = c.getAnnotation(DBTable.class).name();
-        }
+
+        System.out.println(sqlBuilder.toString());
         return sqlBuilder.toString();
     }
 
