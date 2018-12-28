@@ -9,15 +9,15 @@ import java.time.LocalDateTime;
 @DBTable(name="Книги")
 @SerialID
 public  class Book implements Serializable {
-    @AttribType(typeName ="String")
+    @AttribType(typeName ="text")
     String bookname;
-    @AttribType(typeName ="String")
+    @AttribType(typeName ="text")
 
     String authtor;
-    @AttribType(typeName ="Integer")
+    @AttribType(typeName ="integer")
 
     int year;
-    @AttribType(typeName ="Integer")
+    @AttribType(typeName ="integer")
 
     int pages;
     @AttribType(typeName ="Date")

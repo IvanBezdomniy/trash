@@ -2,14 +2,23 @@ package lab.Server.ORM;
 
 
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import jdk.nashorn.internal.parser.JSONParser;
+import lab.Server.ORM.annotations.AttribType;
 import lab.Server.ORM.annotations.DBTable;
+import org.jsoup.Jsoup;
+import org.jsoup.parser.Parser;
 
+import java.sql.Connection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 public class SQLCommands
 {
+
+
     private Table table;
     private Class<?> c;
 
@@ -30,11 +39,43 @@ public class SQLCommands
 
         for(Table t : ClassAnalizer.parseWithConnections(c))
         {
+
+
             sqlBuilder.append("CREATE TABLE ");
             sqlBuilder.append(t.toString());
             sqlBuilder.append("\n");
         }
 
+        return sqlBuilder.toString();
+    }
+    public String insert(String jsonString){
+        StringBuilder sqlBuilder = new StringBuilder();
+        for(Table t : ClassAnalizer.parseWithConnections(c)) {
+
+            sqlBuilder.append("INSERT INTO ");
+            sqlBuilder.append(c.getAnnotation(DBTable.class).name());
+            sqlBuilder.append("(");
+            for (Attribute row:table.getAttributes()
+                 ) {
+                String s =row.toString();
+                s=s.substring(0,s.indexOf(" "));
+                s=s+", ";
+                sqlBuilder.append(s);
+            }
+
+            sqlBuilder.delete(sqlBuilder.length()-2,sqlBuilder.length()-1);
+            sqlBuilder.append(") ");
+            sqlBuilder.append("VALUES(");
+            for (Attribute row:table.getAttributes()
+            ) {
+
+
+                String s =row.toString();
+                s=s.substring(0,s.indexOf(" "));
+
+            }
+//            String tableName = c.getAnnotation(DBTable.class).name();
+        }
         return sqlBuilder.toString();
     }
 
