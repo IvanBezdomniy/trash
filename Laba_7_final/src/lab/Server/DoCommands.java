@@ -1,7 +1,5 @@
 package lab.Server;
 
-import sample.Main;
-
 public class DoCommands {
 
 
@@ -42,7 +40,7 @@ public class DoCommands {
        else if (line.startsWith("add")){
            line = line.substring(line.indexOf("{"));
            try {
-               collect.getLiblaries().put(collect.getLiblaries().size(),Collect.fromJsonStringToObject(line));
+               collect.getLiblaries().put(collect.getLiblaries().size()+1,Collect.fromJsonStringToObject(line));
            }
            catch (Exception e) {
                System.out.println("Неверно введена книга");

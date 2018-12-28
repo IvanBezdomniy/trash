@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
-import java.util.HashMap;
-import java.util.Map;
 
 public class WorkWithClients implements Runnable
 {

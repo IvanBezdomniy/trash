@@ -1,13 +1,8 @@
 package lab.Server;
 
-import java.io.IOException;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Queue;
 
 
 public class ServOneClient implements Runnable

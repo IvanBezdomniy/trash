@@ -2,20 +2,18 @@ package sample;
 
 import com.interactivemesh.jfx.importer.ImportException;
 import com.interactivemesh.jfx.importer.obj.ObjModelImporter;
-import javafx.animation.*;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.*;
-import javafx.scene.transform.Rotate;
-import javafx.scene.transform.Translate;
+import javafx.scene.shape.MeshView;
+import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import lab.Client.ClientLogic;
 import lab.Server.Book;
@@ -23,7 +21,10 @@ import lab.Server.Collect;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.ResourceBundle;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientController {
@@ -31,7 +32,7 @@ public class ClientController {
     public static Double filterYears = 0.0;
     public static Map<Integer, Book> books;
     public static List<Rectangle> rectangles= new ArrayList<>();
-    public static String jsonbooks;
+    public String jsonbooks;
     Map<Rectangle, String> rectangleBookMap;
     @FXML
     private ResourceBundle resources;
@@ -52,6 +53,15 @@ public class ClientController {
 
     @FXML
     private Button buttonAnimation;
+    int indexn;
+
+    public int getIndexn() {
+        return indexn;
+    }
+
+    public void setIndexn(int indexn) {
+        this.indexn = indexn;
+    }
 
     @FXML
     void initialize() throws IOException {
@@ -66,17 +76,11 @@ public class ClientController {
 //        books=all.getLiblaries();
         rectangleBookMap = new ConcurrentHashMap<>();
         jsonbooks= ClientLogic.request("1");
-        int indexn;
+
+
         Thread downloadThread = new Thread(new Download());
 
-        while (true){
-            indexn=jsonbooks.indexOf("\n");
-            if (indexn==-1)
-                break;
-            listBooks.add(jsonbooks.substring(0,indexn));
-            jsonbooks=jsonbooks.substring(indexn+1);
 
-        }
 
         sliderPages.valueChangingProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -118,6 +122,19 @@ public class ClientController {
     }
 
     public void drawBook(){
+        try {
+            jsonbooks= ClientLogic.request("1");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        do {
+            indexn=jsonbooks.indexOf("\n");
+            if (indexn==-1)
+                break;
+            listBooks.add(jsonbooks.substring(0,indexn));
+            jsonbooks=jsonbooks.substring(indexn+1);
+
+        }while (jsonbooks.indexOf("\n")!=-1);
         tilepane.getChildren().clear();
         tilepane.setHgap(20);
         tilepane.setVgap(20);
@@ -135,7 +152,7 @@ public class ClientController {
         }
 //        Thread threadHover = new Thread(new Hover(rectangleBookMap, tilepane));
 //        threadHover.start();
-
+        listBooks.clear();
     }
 
 

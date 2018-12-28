@@ -15,13 +15,13 @@ public class ObjectController {
     void SubmitObjectbyEnter(KeyEvent event) {
         if(event.getCode().equals(KeyCode.ENTER)){
             submitObject();}
-            }
+    }
     @FXML
     void submitObject() {
-     String s = textObject.getText();
-      System.out.println(s);
-      DoCommands.command = DoCommands.command+s;
-     DoCommands.DoCommand();
+        String s = textObject.getText();
+        System.out.println(s);
+        DoCommands.command = DoCommands.command+s;
+        DoCommands.DoCommand();
 
     }
 

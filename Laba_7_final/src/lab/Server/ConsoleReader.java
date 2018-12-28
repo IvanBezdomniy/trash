@@ -3,18 +3,12 @@ package lab.Server;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
-import java.util.Map;
 
 import static lab.Server.Collect.*;
-import static lab.Server.CommandsPatterns.checkWithRegExpImport;
-import static lab.Server.CommandsPatterns.checkWithRegExpInsert;
-import static lab.Server.CommandsPatterns.checkWithRegExpRemove;
+import static lab.Server.CommandsPatterns.*;
 
 public class ConsoleReader implements Runnable {
     String recieve;
